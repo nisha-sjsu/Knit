@@ -19,7 +19,7 @@ async def evaluate_boolean(evaluation_request: EvaluationRequest, request: Reque
     # async request to Flipt server
     async with httpx.AsyncClient() as client:
         flipt_response = await client.post(
-            "http://relaxed_bartik:8080/evaluate/v1/boolean",
+            "http://flipt-server:8080/evaluate/v1/boolean",
             json=flipt_payload
         )
     
