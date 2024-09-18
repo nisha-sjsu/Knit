@@ -3,7 +3,7 @@
 This project is a FastAPI-based server that uses the Flipt feature flagging service to evaluate feature flags based on an incoming request. 
 The FastAPI server interacts with the Flipt server using an asynchronous HTTP request and returns a boolean flag decision based on the Flipt response.<br>
 The goal here is to check if `new-feature` flag is enabled or disabled based on on the browser the user is using (user-agent string).
-The `new-feature` flag returns true for **mac-users segment** with the constraint that the **user_agent property equals Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)**, else returns false.
+The `new-feature` flag returns true for **mac-users segment** with the constraint that the **user_agent** property equals **Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)**, else returns false.
 
 ### Requirements
 
