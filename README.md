@@ -53,7 +53,7 @@ Now, the FastAPI server will be running on port `8000` and can communicate with 
 You can use `curl` to test the API. Replace `<key_name>` and `<request_id>` with appropriate values.
 
 ```bash
-curl -X POST "http://localhost:8000/evaluate/boolean" \
+curl -X POST "http://localhost:8000/flipt/evaluate/boolean" \
     -H "Content-Type: application/json" \
     -H "useragent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)" \
     -d '{"key_name": "<key_name>", "request_id": "<request_id>"}'
