@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  flipt:
+    image: flipt/flipt:latest
+    container_name: flipt-server
+    ports:
+      - "8080:8080"
+    networks:
+      - flipt-network
+
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi-server
+    ports:
+      - "8000:8000"
+    depends_on:
+      - flipt
+    networks:
+      - flipt-network
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+    
+networks:
+  flipt-network:
+    driver: bridge
